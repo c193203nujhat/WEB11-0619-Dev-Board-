@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WEB11-0619-Dev Board</title>
+    <link rel="icon" href="./assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Google Font CDN -->
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- daisyUI & Tailwind Script CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+      rel="stylesheet"
+      type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./tailwind.config.js"></script>
+    <!-- Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- style css link -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body class="mx-14 my-5 font-[Poppins] bg-[#F4F7FF]">
+    <!-- Header & Nav bar-->
+    <main class="bg-slate-300 min-h-screen p-2">
+        <header class="w-11/12 mx-auto">
+          <nav class="bg-white rounded flex justify-between items-center p-3">
+            <div class="flex items-center gap-2">
+              <img src="./assets/logo.png" alt="" />
+              <h1 class="text-3xl">
+                WEB11-0619<span class="font-bold text-3xl text-black">Dev Board</span>
+              </h1>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex gap-2 bg-blue-100 py-2 rounded-full px-4">
+                <img src="./assets/checkbox.png" alt="">
+                <button id="count" class="text-2xl font-bold">23</button>
+              </div>
+    
+              <button id="change-bg" class="bg-blue-200 rounded-full">
+                <img class="p-1" src="assets/theme-btn.png" alt="" />
+              </button>
+            </div>
+          </nav>
+        </header>
+
+    <!-- Main Section  -->
+    <main class="flex flex-col gap-3 lg:grid lg:grid-cols-5">
+     
+      <section class="px-[0.75rem] py-[0.75rem] mt-5 bg-base-100 col-span-4 rounded-xl items-center">
+          
+          <div class="flex flex-col gap-3 pb-5 mb-5 border-b-2 border-gray-300 border-dotted md:grid md:grid-cols-8">
+              <div class="bg-base-100 col-span-2 flex justify-center items-center p-5 bg-[#F4F7FF] gap-3 rounded-xl">
+                  <img class="p-2 rounded-full bg-base-100" src="./assets/checkbox.png" alt="checkbox">
+                   <div>
+                <p>Task Assigned</p>
+                <p id="taskA" class="font-bold text-xl">6</p>
+              </div>
+              </div>
+
+              <div id="discover-btn"
+                  class="col-span-4 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] flex items-center gap-3 justify-center p-5 rounded-xl hover:cursor-pointer hover:shadow-lg"> 
+                  <img src="./assets/board.png" alt="board">
+                  <h1 class="font-medium text-justify text-white">Discover Something New Today!</h1>
+                  
+              </div>
+
+              <div class="bg-base-100 col-span-2 flex items-center p-5 bg-[#F4F7FF] gap-3 rounded-xl justify-center">
+                  <img class="p-2 rounded-full bg-base-100" src="./assets/calender.png" alt="calender">
+                  <div>
+                    <p id="date">
+                      <br />
+                      <span id="current-date" class="font-bold text-xl"
+                        >Jul 30 2025</span
+                      >
+                    </p>
+                  </div>
+              </div>
+          </div>
+          <!-- card section Area-->
+         
+          <div
+          class="border-t-2 border-dashed border-gray-200 bg-white rounded-b p-4"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- card-1 -->
+            <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
+              <p class="w-24 text-center h-8 rounded p-1 bg-white">
+                Shop Ease
+              </p>
+              <h2 class="text-xl font-semibold">Fix Mobile Button Issue</h2>
+              <p class="p-2 bg-white rounded text-sm text-gray-600">
+                💡 fixed mobile device interface and button response problems to guarantee a flawless user experience. <br />all devices
+              </p>
+              <div
+                class="flex items-center justify-between border-t-2 border-dashed border-gray-200"
+              >
+                <p class="text-sm text-gray-600 mt-4">
+                  Deadline <br />
+                  <span class="text-black font-semibold">25 March 2025</span>
+                </p>
+                <button class="btn btn-primary btn-completed">
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- card-2 -->
+            <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
+              <p class="w-20 text-center h-8 rounded p-1 bg-white">
+                Soft Pay
+              </p>
+              <h2 class="text-xl font-semibold">Add Pay Success Modal</h2>
+              <p class="p-2 bg-white rounded text-sm text-gray-600">
+                💰 By informing users, enhances their experience, and encourages them to continue interacting with this website or app.
+              </p>
+              <div
+                class="flex items-center justify-between border-t-2 border-dashed border-gray-200"
+              >
+                <p class="text-sm text-gray-600 mt-4">
+                  Deadline <br />
+                  <span class="text-black font-semibold">21 March 2025</span>
+                </p>
+                <button class="btn btn-primary btn-completed">
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- card-3 -->
+            <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
+              <p class="w-20 text-center h-8 rounded p-1 bg-white">
+                Meta
+              </p>
+              <h2 class="text-xl font-semibold">Add new reaction🤲</h2>
+              <p class="p-2 bg-white rounded text-sm text-gray-600">
+                Enhance SEO and boost search engine visibility by optimizing the website's meta tags.
+              </p>
+              <div
+                class="flex items-center justify-between border-t-2 border-dashed border-gray-200"
+              >
+                <p class="text-sm text-gray-600 mt-4">
+                  Deadline <br />
+                  <span class="text-black font-semibold">31 March 2025</span>
+                </p>
+                <button class="btn btn-primary btn-completed">
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- card-4 -->
+            <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
+              <p class="w-36 text-center h-8 rounded p-1 bg-white">Programming Hero</p>
+              <h2 class="text-xl font-semibold">Fix Video Loading Issue</h2>
+              <p class="p-2 bg-white rounded text-sm text-gray-600">
+                🚀 Fix video loading issues by optimizing buffering, 🔍 reviewing network requests, and ✅ ensuring format compatibility.
+              </p>
+              <div
+                class="flex items-center justify-between border-t-2 border-dashed border-gray-200"
+              >
+                <p class="text-sm text-gray-600 mt-4">
+                  Deadline <br />
+                  <span class="text-black font-semibold">21 March 2025</span>
+                </p>
+                <button class="btn btn-primary btn-completed">
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- card-5 -->
+            <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
+              <p class="w-28 text-center h-8 rounded p-1 bg-white">
+                SGoogle LLC
+              </p>
+              <h2 class="text-xl font-semibold">Integrate AI Search</h2>
+              <p class="p-2 bg-white rounded text-sm text-gray-600">
+                🚀 Upgraded AI capabilities by integrating OpenAI's powerful API for smarter, faster, and <br/>more efficient operations. ⚡
+              </p>
+              <div
+                class="flex items-center justify-between border-t-2 border-dashed border-gray-200"
+              >
+                <p class="text-sm text-gray-600 mt-4">
+                  Deadline <br />
+                  <span class="text-black font-semibold">01 April 2025</span>
+                </p>
+                <button class="btn btn-primary btn-completed">
+                  Completed
+                </button>
+              </div>
+            </div>
+
+            <!-- card-6 -->
+            <div id="last" class="bg-[#f4f7ff] rounded p-4 space-y-4">
+              <p class="w-32 text-center h-8 rounded p-1 bg-white">
+                Fifty-two Tech
+              </p>
+              <h2 class="text-xl font-semibold"> update job search </h2>
+              <p class="p-2 bg-white rounded text-sm text-gray-600">
+                🔎 Improved job search features that make it simpler for consumers to locate pertinent openings quickly⚡.
+              </p>
+              <div
+                class="flex items-center justify-between border-t-2 border-dashed border-gray-200"
+              >
+                <p class="text-sm text-gray-600 mt-4">
+                  Deadline <br />
+                  <span class="text-black font-semibold">05 May 2025</span>
+                </p>
+                <button class="btn btn-primary btn-completed">
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- Activity log & Clear History -->
+       <div id="activityLogContainer">
+       <section class="col-span-1 py-5 bg-base-100 lg:mt-5 rounded-xl">
+        <div class="space-y-3 mt-5 border-b-2 border-dashed border-gray-200">
+          <div class="flex justify-center gap-2">
+                <img src="./assets/activity.png" alt="activity">
+                <h1 class="font-semibold">Activity Log</h1>
+            </div>
+            <div class="text-center mb-5">
+              <button id="clear-history-btn" class="btn btn-primary">Clear History</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+</main>
+<script src="./script/All.js"></script>
+<script src="./script/blog post.js"></script>
+<script src="./script/theme.js"></script>
+<script src="./script/date.js"></script>
+<script src="./script/index.js"></script>
+  
+  </body>
+</html>
+  

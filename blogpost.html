@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WEB11-0619-Dev Board</title>
+    <link rel="icon" href="./assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Google Font CDN -->
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- daisyUI & Tailwind Script CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- style css link -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body class="poppins-font bg-[#F4F7FF]">
+    <!-- nev bar -->
+    <header class="w-11/12 mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start p-3">
+          <div class="flex h-3 items-center gap-2">
+            <img src="./assets/logo.png" alt="" />
+            <h1 class="text-3xl">
+                WEB11-0619<span class="font-bold text-3xl text-black">Dev Board</span>
+            </h1>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <a id="back-to" class="btn bg-blue-600 text-white">Back to Disk</a>
+        </div>
+      </div>
+    </header>
+<!-- Main Section  -->
+<main class="w-11/12 mx-auto my-4">
+    <section class="mt-6">
+      <h1 class="text-center p-4 font-bold text-3xl">blog</h1>
+      <div class="space-y-7">
+        <!-- Q/A Area -->
+         <!--Q1-->
+        <h1 class="text-[1rem] font-bold p-3 text-justify border-b-2 border-dotted border-gray-300">Question-1: What
+            are the different ways to select an element in the DOM?</h1>
+
+        <!-- Ans:1 -->
+        <p class="text-[0.75rem] md:text-[1rem] text-gray-500 p-3 text-justify">
+            1. By ID → document.getElementById("myId") (Single element)
+            <br>
+            2. By Class → document.getElementsByClassName("myClass") (HTMLCollection)
+            <br>
+            3.By Tag → document.getElementsByTagName("p") (HTMLCollection)
+            <br>
+            4. By Query Selector → document.querySelector(".myClass") (First match)
+            <br>
+            5. By Query Selector All → document.querySelectorAll("div") (NodeList)
+            <br>
+            6.By Name Attribute → document.getElementsByName("username") (NodeList)
+            <br>
+            7.By document.body and document.head
+        </p>
+    </div>
+
+    <div class="bg-white w-full rounded-xl mt-[0.75rem] lg:mt-5">
+        <!--Q2 -->
+        <div class="bg-white rounded-xl p-6">
+           <h1 class="text-[1rem] font-bold p-3 text-justify border-b-2 border-dotted border-gray-300">
+              Question-2: What is the difference between innerHTML, innerText,
+              and textContent ?
+            </h1>
+
+            <!-- Ans:2 -->
+        <p class="text-[0.75rem] md:text-[1rem] text-gray-500 p-3 text-justify">
+            
+                innerHTML: Gets or sets the full HTML within an element. <br />
+              <br />
+              innerText: Gets or sets the rendered text content, as shown on the page. <br />
+              <br />
+              textContent: Gets or sets the raw text content, exactly as in the HTML source.
+            
+            </p>
+          </div>
+          <div class="bg-white w-full rounded-xl mt-[0.75rem] lg:mt-5">
+            <!-- Q3 -->
+            <h1 class="text-[1rem] font-bold p-3 text-justify border-b-2 border-dotted border-gray-300">Question-3: What
+                is event delegation in the DOM?</h1>
+
+            <!-- Ans:3 -->
+            <p class="text-[0.75rem] md:text-[1rem] text-gray-500 p-3 text-justify">
+                JavaScript's event delegation technique involves attaching a single event listener to a parent element so that it can handle events that happen on its child elements, either now or in the future. The event bubbling method is used to record events at the parent level and then identify which child element caused the event, as opposed to assigning individual listeners to each child.
+            </p>
+        </div>
+         <!--Q4 -->
+         <div class="bg-white rounded-xl p-6">
+           <h1 class="text-[1rem] font-bold p-3 text-justify border-b-2 border-dotted border-gray-300">
+              Question-4: What is event bubbling in the DOM?
+            </h1>
+
+            <br />
+           <!--Ans:4-->
+           <p class="text-[0.75rem] md:text-[1rem] text-gray-500 p-3 text-justify">
+            
+                Event bubbling is the process by which an event on one element sets off event listeners on that element, its parent, its grandparent, and so on up the DOM tree.
+            
+          </div>
+          <br class="bg-white w-full rounded-xl mt-[0.75rem] lg:mt-5">
+            <!-- Q5-->
+            <h1 class="text-[1rem] font-bold p-3 text-justify border-b-2 border-dotted border-gray-300">Question-5: How
+                do you create, add, and remove elements using JavaScript?</h1>
+
+            <!-- Ans:5 -->
+            <br class="text-[0.75rem] md:text-[1rem] text-gray-500 p-3 text-justify">
+                Create: document.createElement('elementName')
+            <br />
+                Add: parent.appendChild(child) or parent.insertBefore(child, existingChild)
+                <br/>
+                Remove: parent.removeChild(child) or child.remove()
+            </p>
+        </div>
+    </main>
+<!--js Script-->
+    <script src="./script/index.js"></script>
+</body>
